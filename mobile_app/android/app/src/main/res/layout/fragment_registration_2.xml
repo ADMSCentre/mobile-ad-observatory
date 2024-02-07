@@ -1,0 +1,744 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/fragment_registration_2"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.adms.australianmobileadobservatory.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:id="@+id/fragment_main_unregistered"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_bold"
+                android:letterSpacing="0.1"
+                android:paddingHorizontal="0dp"
+                android:paddingVertical="10dp"
+                android:text="DEMOGRAPHIC DETAILS FORM"
+                android:textColor="@color/yellow_primary"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp"
+                android:textAlignment="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="Thank you for choosing to participate in the Australian Ad Observatory data donation project. As part of the this process, we kindly request a few basic details about you. All demographic details will be de-identified; we do not request any information that could be used to personally identify you." />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+            <Switch
+                android:id="@+id/switchResidingInAustralia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="Are you currently residing in Australia?"
+                android:textColor="@color/yellow_primary"
+                android:checked="true"
+                android:textOff="No"
+                android:textOn="Yes"
+                android:theme="@style/Switch" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+
+        <LinearLayout
+            android:id="@+id/fragmentMainUnregisteredAustralian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <!---->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp"
+                android:textAlignment="center" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What is your gender?"
+                    android:textColor="@color/yellow_primary" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="gender_male"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="gender_female"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPreferNotToSay"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="gender_prefer_not_to_say"
+                    android:text="Prefer not to say" />
+
+
+                <RadioButton
+                    android:id="@+id/radioButtonGenderSpecify"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="gender_specify"
+                    android:text="I would like to specify" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/radioButtonSpecifyGenderTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:hint="Specify your gender here" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/warningInputGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:textColor="@color/red_primary"
+                android:visibility="gone"
+                android:text="Please specify your gender" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp"
+                android:textAlignment="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="What is your current age?"
+                    android:textColor="@color/yellow_primary" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAge1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="age_18_24"
+                    android:text="18 - 24" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAge2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="age_25_34"
+                    android:text="25 - 34" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAge3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="age_35_44"
+                    android:text="35 - 44" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAge4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="age_45_54"
+                    android:text="45 - 54" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAge5"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="age_55_64"
+                    android:text="55 - 64" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAge6"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="age_65_74"
+                    android:text="65 - 74" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAge7"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="age_75_and_over"
+                    android:text="75 and over" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAge8"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="age_prefer_not_to_say"
+                    android:text="Prefer not to say" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/warningInputAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:textColor="@color/red_primary"
+                android:visibility="gone"
+                android:text="Please specify your age" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:text="What is your postcode?"
+                android:textColor="@color/yellow_primary" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputPostcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:digits="0123456789"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:hint="Specify your postcode here" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/warningInputPostcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:textColor="@color/red_primary"
+                android:visibility="gone"
+                android:text="Please specify your postcode" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+            <Switch
+                android:id="@+id/switchIndigeneity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="Do you identify as Aboriginal or Torres Strait Islander?"
+                android:textColor="@color/yellow_primary"
+                android:textOff="No"
+                android:textOn="Yes"
+                android:theme="@style/Switch" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="What is your level of education?"
+                    android:textColor="@color/yellow_primary" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="education_less_than_yr_12_or_equivalent"
+                    android:text="Less than year 12 or equivalent" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="education_yr_12_or_equivalent"
+                    android:text="Year 12 or equivalent" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="education_bachelor_degree_level"
+                    android:text="Bachelor degree level" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="education_postgraduate_degree_level"
+                    android:text="Postgraduate degree level" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="education_prefer_not_to_say"
+                    android:text="Prefer not to say" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/warningInputEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:textColor="@color/red_primary"
+                android:visibility="gone"
+                android:text="Please specify your level of education" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="What is your annual income?"
+                    android:textColor="@color/yellow_primary" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_1_15599"
+                    android:text="$1 - 15,599" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_15600_20799"
+                    android:text="$15,600 - $20,799" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_20800_25999"
+                    android:text="$20,800 - $25,999" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_26000_33799"
+                    android:text="$26,000 - $33,799" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_33800_41599"
+                    android:text="$33,800 - $41,599" />
+
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_41600_51999"
+                    android:text="$41,600 - $51,999" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_52000_64999"
+                    android:text="$52,000 - $64,999" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_65000_77999"
+                    android:text="$65,000 - $77,999" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_78000_90999"
+                    android:text="$78,000 - $90,999" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_91000_103999"
+                    android:text="$91,000 - $103,999" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_104000_155999"
+                    android:text="$104,000 - $155,999" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_156000_or_more"
+                    android:text="$156,000 or more" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="income_prefer_not_to_say"
+                    android:text="Prefer not to say" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/warningInputIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:textColor="@color/red_primary"
+                android:visibility="gone"
+                android:text="Please specify your annual income" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupEmployment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="What is your current employment status?"
+                    android:textColor="@color/yellow_primary" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="employment_full_time"
+                    android:text="Employed full time" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="employment_part_time"
+                    android:text="Employed part time" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="employment_unemployed_looking_for_work"
+                    android:text="Unemployed and looking for work" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="employment_unemployed_not_looking_for_work"
+                    android:text="Unemployed and not looking for work" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="employment_retired"
+                    android:text="Retired" />
+
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="employment_prefer_not_to_say"
+                    android:text="Prefer not to say" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/warningInputEmployment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:textColor="@color/red_primary"
+                android:visibility="gone"
+                android:text="Please specify your employment status" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp"
+                android:textAlignment="center" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupPartyPreference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What is your political party preference?"
+                    android:textColor="@color/yellow_primary" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonLiberal"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="political_party_preference_liberal"
+                    android:text="Liberal" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonNational"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="political_party_preference_national"
+                    android:text="National" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonLabor"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="political_party_preference_labor"
+                    android:text="Labor" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonGreens"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="political_party_preference_greens"
+                    android:text="Greens" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonOneNation"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="political_party_preference_one_nation"
+                    android:text="One Nation" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonNone"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="political_party_preference_none"
+                    android:text="None" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPartyPreferNotToSay"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="political_party_preference_prefer_not_to_say"
+                    android:text="Prefer not to say" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonPartyPreferenceSpecify"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:tag="political_party_preference_specify"
+                    android:text="I would like to specify" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/radioButtonPartyPreferenceSpecifyTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputPoliticalPartyPreference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:hint="Specify your party preference here" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/warningInputPoliticalPartyPreference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:textColor="@color/red_primary"
+                android:visibility="gone"
+                android:text="Please specify your political party preference" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp"
+                android:textAlignment="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="Thank you, this concludes the demographic information. Please click the button below to send these details and complete the installation, or go back without sending any information." />
+
+
+            <!---->
+
+        </LinearLayout>
+            <TextView
+                android:id="@+id/textViewAustralianCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/red_primary"
+                android:visibility="gone"
+                android:text="Unfortunately, participation in the Australian Mobile Ad Observatory is not available to people outside Australia at this point in time." />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp"
+                android:textAlignment="center" />
+
+
+            <Button
+                android:id="@+id/buttonCompleteRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complete Registration"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/buttonBackFromRegistration2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Go Back"
+                android:theme="@style/SecondaryButton"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="15dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/yellow_primary" />
+
+            <TextView
+                android:id="@+id/fragment_main_privacy_policy_unregistered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:text="@string/app_footer_privacy_policy"
+                android:textAlignment="center" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
