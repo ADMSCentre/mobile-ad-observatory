@@ -1,0 +1,3 @@
+[submodule "mobile_app"]
+	path = mobile_app
+	url = git@github.com:ADMSCentre/australian-mobile-ad-toolkit-internal.git
