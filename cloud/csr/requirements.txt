@@ -1,0 +1,4 @@
+narwhals==1.48.0
+packaging==25.0
+plotly==6.2.0
+pytz==2025.2

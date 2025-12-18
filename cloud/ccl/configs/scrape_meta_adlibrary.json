@@ -1,0 +1,77 @@
+{
+	"" : {
+		"base_headers" : {
+				"accept" : "*/*",
+				"accept-language" : "en-US,en;q=0.9,ar;q=0.8,it;q=0.7",
+				"content-type" : "application/x-www-form-urlencoded",
+				"origin" : "https://www.facebook.com",
+				"priority" : "u=1, i",
+				"sec-ch-prefers-color-scheme" : "dark",
+				"sec-ch-ua" : "\"Chromium\";v=\"128\", \"Not;A=Brand\";v=\"24\", \"Google Chrome\";v=\"128\"",
+				"sec-ch-ua-full-version-list" : "\"Chromium\";v=\"128.0.6613.120\", \"Not;A=Brand\";v=\"24.0.0.0\", \"Google Chrome\";v=\"128.0.6613.120\"",
+				"sec-ch-ua-mobile" : "?0",
+				"sec-ch-ua-model" : "\"\"",
+				"sec-ch-ua-platform" : "\"macOS\"",
+				"sec-ch-ua-platform-version" : "\"14.4.1\"",
+				"sec-fetch-dest" : "empty",
+				"sec-fetch-mode" : "cors",
+				"sec-fetch-site" : "same-origin",
+				"user-agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+			},
+		"ad_capture_appendage" : {
+				"active_status" : "active",
+				"ad_type" : "political_and_issue_ads",
+				"country" : "AU",
+				"media_type" : "all",
+				"source" : "fb-logo"
+			},
+		"ad_capture_appendage_alt" : {
+				"view_all_page_id": "120184674661521"
+			},
+		"aws" : {
+			"AWS_PROFILE" : "dmrc",
+			"AWS_REGION" : "ap-southeast-2"
+		},
+		"request_config_base" : {
+			"ad_capture_appendage" : {
+				"active_status" : "all",
+				"ad_type" : "all",
+				"country" : "AU",
+				"media_type" : "all",
+				"search_type" : "page",
+				"view_all_page_id" : "120184674661521"
+			}
+		},
+		"requests" : {
+			"ad_library_mobile_focused_state_provider_refetch_query" : {
+				"activeStatus" : "ALL",
+				"adType" : "ALL",
+				"audienceTimeframe" : "LAST_7_DAYS",
+				"bylines" : [],
+				"collationToken" : null,
+				"contentLanguages" : [],
+				"countries" : ["AU"],
+				"country" : "AU",
+				"excludedIDs" : [],
+				"fetchPageInfo" : true,
+				"fetchSharedDisclaimers" : true,
+				"location" : null,
+				"mediaType" : "ALL",
+				"pageIDs" : [],
+				"potentialReachInput" : [],
+				"publisherPlatforms" : [],
+				"regions" : [],
+				"searchType" : "KEYWORD_EXACT_PHRASE",
+				"sortData" : null,
+				"source" : "FB_LOGO",
+				"startDate" : null,
+				"viewAllPageID" : "0"
+			}
+		},
+		"tinyproxy_path" : "/Users/obei/Developer/2024/_09_proxies/common-aws-tinyproxy",
+		"holding_bucket" : "fta-mobile-observations-holding-bucket",
+		"vpn_meta_adlibrary" : "3.25.172.83",
+		"vpn_mass_downloads" : "3.106.201.18",
+		"observations_bucket" : "fta-mobile-observations-v2"
+	}
+}

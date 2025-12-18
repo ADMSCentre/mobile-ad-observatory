@@ -1,0 +1,16 @@
+{
+    "repository": {
+        "repositoryArn": "arn:aws:ecr:ap-southeast-2:519969025508:repository/moat_clip_classifier_docker_ecr",
+        "registryId": "519969025508",
+        "repositoryName": "moat_clip_classifier_docker_ecr",
+        "repositoryUri": "519969025508.dkr.ecr.ap-southeast-2.amazonaws.com/moat_clip_classifier_docker_ecr",
+        "createdAt": "2025-11-01T15:21:05.204000+10:00",
+        "imageTagMutability": "MUTABLE",
+        "imageScanningConfiguration": {
+            "scanOnPush": true
+        },
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        }
+    }
+}
