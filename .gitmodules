@@ -1,3 +1,9 @@
 [submodule "mobile_app"]
 	path = mobile_app
 	url = git@github.com:ADMSCentre/australian-mobile-ad-toolkit-internal.git
+[submodule "dashboard"]
+	path = dashboard
+	url = https://github.com/Australian-Internet-Observatory/aao-dashboard.git
+[submodule "api"]
+	path = api
+	url = https://github.com/Australian-Internet-Observatory/aao-api.git
